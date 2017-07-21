@@ -2,7 +2,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-
+var bodyParser = require("body-parser");
 
 // Sets up the Express App
 // =============================================================
@@ -16,16 +16,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Routes
-// =============================================================
+require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes')(app);
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/home.html"));
-});
-
-// Create new flavors
-app.post("/api/new", function(req, res) {
-});
 
 // Starts the server to begin listening
 // =============================================================
