@@ -10,6 +10,8 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+
 	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -27,6 +29,22 @@
 <h1>Who do you match with?</h1>
 <h2>Find Out!</h2>
 <a href="/survey" class="btn btn-primary" role="button">Take the Survey Now!</a>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>List of friends</h2>
+	</div>
+	<table id="table" data-toggle="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Photo</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="friendsJSON"></div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -35,8 +53,10 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="assets/javascript/index.js"></script>
+
 </body>
 </html>
