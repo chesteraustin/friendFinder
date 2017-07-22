@@ -11,13 +11,14 @@
 
 		app.post("/api/friends", function(req, res) {
 			var newFriend = req.body;
+			console.log(newFriend);
 			var currentScores = [];
 			var matchedFriend = 0;
 			var matchedScore = 100; //largest value difference
 
 			//function to add array
 			function add(a,b){
-				return a + b 
+				return parseInt(a) + parseInt(b) 
 			}
 
 			//Get total score for each person in PERSON object
@@ -29,7 +30,7 @@
 			}
 
 			//Get total score for new entry
-			var newFriendScore = newFriend[0].scores;
+			var newFriendScore = newFriend.scores;
 			var newFriendSum = newFriendScore.reduce(add, 0);
 
 			//Now, compare each score in currentScores (all of the friend's scores) with newFriendSum (the new entry's score)
@@ -43,7 +44,10 @@
 			}
 			//Get name of matched person
 			var matchedPerson = people[matchedFriend];
+
+			//Push person to people object
+			people.push(newFriend);
 			res.json(matchedPerson);
-1		});
+		});
 	};
 })();
