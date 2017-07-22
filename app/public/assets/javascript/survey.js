@@ -22,6 +22,9 @@ $( document ).ready(function(){
 					console.log(error)
 				},
 				success: function(data) {
+					//Update friends name
+					$("#friend-name").text(data.name);
+					$("#friend-modal").modal('show');
 					console.log(data)
 				}
 			});
